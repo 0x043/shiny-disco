@@ -34,6 +34,23 @@ public class TuringTape {
 
     }
 
+    public void moveTapePos(Character d) {
+
+        if(d.equals('R') || d.equals('r')) {
+            currentPos++;
+        } else if(d.equals('L') || d.equals('l')){
+            currentPos--;
+        }
+
+    }
+
+    public void changeState(int s) {
+
+        // Implement state checking, to make sure that the state exists.
+
+        currentState = s;
+    }
+
     public int getCurrentState() {
         return currentState;
     }
