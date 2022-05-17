@@ -8,5 +8,14 @@ public class Main {
         testTape.printAll();
 
         System.out.println(testTape.getTapeFPos(2));
+
+        System.out.println(testTape.getCurrentPos());
+        testTape.moveTapePos('L');
+        System.out.println(testTape.getCurrentPos());
+        testTape.moveTapePos('R');
+        System.out.println(testTape.getCurrentPos());
+        testTape.moveTapePos('r');
+        System.out.println(testTape.getCurrentPos());
+
     }
 }
