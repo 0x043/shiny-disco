@@ -2,6 +2,8 @@ import java.util.LinkedList;
 
 public class TuringTape {
 
+    // TODO: Algo to find current state, identify symbol on current tape position, and get the instruction set for that state.
+
     private LinkedList<Character> tape;
 
     // States are defined as the following:
