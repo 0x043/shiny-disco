@@ -10,8 +10,8 @@ public class turingStates {
 
      */
 
-    public turingStates() {
-
+    public turingStates(stateOb[] sts) {
+        stateList = sts;
     }
 
 }
