@@ -46,6 +46,10 @@ public class TuringTape {
 
     }
 
+    public Character getTapeCurrentSymbol() {
+        return getTapeFPos(getCurrentPos());
+    }
+
     public void changeState(int s) {
 
         // Implement state checking, to make sure that the state exists.
