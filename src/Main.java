@@ -18,6 +18,20 @@ public class Main {
                 new symOb('9', 2, 'R', 3), new symOb('0', 2, 'L', 3),
                 new symOb('~', 2, 'L', 3)};
 
+        symOb[] symbolObjectThree = { new symOb('1', 3, 'L', 1), new symOb('2', 3, 'L', 1),
+                new symOb('3', 3, 'L', 1), new symOb('4', 3, 'L', 1),
+                new symOb('4', 3, 'L', 1), new symOb('6', 3, 'L', 1),
+                new symOb('7', 3, 'L', 1), new symOb('8', 3, 'L', 1),
+                new symOb('9', 3, 'L', 1), new symOb('0', 3, 'L', 2),
+                new symOb('~', 3, 'L', 3)};
+
+        symOb[] symbolObjectFour = { new symOb('0', 4, 'R', 4), new symOb('2', 4, 'L', 1),
+                new symOb('3', 4, 'L', 1), new symOb('4', 4, 'L', 1),
+                new symOb('4', 4, 'L', 1), new symOb('6', 4, 'L', 1),
+                new symOb('7', 4, 'L', 1), new symOb('8', 4, 'L', 1),
+                new symOb('9', 4, 'L', 1), new symOb('0', 4, 'L', 2),
+                new symOb('~', 4, 'L', 3)};
+
         stateOb stateOne = new stateOb(1, symbolObjectOne);
         stateOb stateTwo = new stateOb(1, symbolObjectTwo);
 
