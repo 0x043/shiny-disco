@@ -14,4 +14,19 @@ public class stateOb {
 
     }
 
+    public int getNextStateFromArr(int index) {
+        return symbList[index].getNextState();
+    }
+
+    public Character getSymbolFromArr(int index) {
+
+        return symbList[index].getSymbol();
+
+    }
+
+    public int getStateNumFromArr(int index) {
+        return symbList[index].getStateNumber();
+    }
+
+
 }

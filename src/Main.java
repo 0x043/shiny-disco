@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
+        // TODO: All current State and Symbol objects have been defined, implement code in turingRun.java to run the machine and instructions.
+        // Also TODO: Define getter and setter methods in turingStates.java
+
         TuringTape testTape = new TuringTape();
 
         symOb[] symbolObjectOne = { new symOb('0', 1, 'R', 3), new symOb('1', 1, 'R', 3),
@@ -33,7 +36,12 @@ public class Main {
                 new symOb('~', 4, 'L', 3)};
 
         stateOb stateOne = new stateOb(1, symbolObjectOne);
-        stateOb stateTwo = new stateOb(1, symbolObjectTwo);
+        stateOb stateTwo = new stateOb(2, symbolObjectTwo);
+        stateOb stateThree = new stateOb(3, symbolObjectThree);
+        stateOb stateFour = new stateOb(4, symbolObjectFour);
+
+        stateOb[] baseTenStates = { stateOne, stateTwo, stateThree, stateFour };
+        turingStates machine = new turingStates(baseTenStates);
 
         testTape.moveTapePos(stateOne.getMoveDirFromArr(3));
         System.out.println(testTape.getTapeCurrentSymbol());
