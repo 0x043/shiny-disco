@@ -14,4 +14,23 @@ public class turingStates {
         stateList = sts;
     }
 
+    public Character getStateLstSymb (int SymbIndex, int state) {
+
+        return stateList[state - 1].getSymbolFromArr(SymbIndex);
+
+    }
+
+    public Character getMoveDirFromLst(int SymbIndex, int state) {
+
+        return stateList[state - 1].getMoveDirFromArr(SymbIndex);
+
+    }
+
+    public int getNextStateFromLst(int SymbIndex, int state) {
+        return stateList[state - 1].getNextStateFromArr(SymbIndex);
+    }
+
+
+
+
 }
