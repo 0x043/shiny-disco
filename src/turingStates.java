@@ -10,6 +10,9 @@ public class turingStates {
 
      */
 
+
+    // If statement to check if symbol can be convert to char
+
     public turingStates(stateOb[] sts) {
         stateList = sts;
     }
@@ -32,5 +35,19 @@ public class turingStates {
 
 
 
+    public int charToNumConv(TuringTape y) {
+
+
+        if(y.getTapeCurrentSymbol().equals('~')) {
+            return 10;
+        }
+
+        else {
+            return Character.getNumericValue(y.getTapeCurrentSymbol());
+        }
+
+
+
+    }
 
 }

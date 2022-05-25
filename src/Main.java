@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
 
-        // TODO: All current State and Symbol objects have been defined, implement code in turingRun.java to run the machine and instructions.
-        // Also TODO: Define getter and setter methods in turingStates.java
+        // TODO: Implement running the program, display, and halt, also make tape infinite? To display clear the screen then print array
+        // How do I add new places to the number? From 99 to 100, and 999 to 1000? Can I set all of the values to null?
+        // Every time program is at position 0, and the value is 9 -> tape.add(0, '0'); Case?
+
 
         /*
 
@@ -33,6 +35,7 @@ public class Main {
                 new symOb('~', 1, 'L', 3)};
 
 
+
         symOb[] symbolObjectTwo = { new symOb('1', 2, 'R', 4), new symOb('2', 2, 'R', 3),
                 new symOb('3', 2, 'R', 3), new symOb('4', 2, 'R', 3),
                 new symOb('4', 2, 'R', 3), new symOb('6', 2, 'R', 3),
@@ -42,7 +45,7 @@ public class Main {
 
         symOb[] symbolObjectThree = { new symOb('1', 3, 'L', 1), new symOb('2', 3, 'L', 1),
                 new symOb('3', 3, 'L', 1), new symOb('4', 3, 'L', 1),
-                new symOb('4', 3, 'L', 1), new symOb('6', 3, 'L', 1),
+                new symOb('5', 3, 'L', 1), new symOb('6', 3, 'L', 1),
                 new symOb('7', 3, 'L', 1), new symOb('8', 3, 'L', 1),
                 new symOb('9', 3, 'L', 1), new symOb('0', 3, 'L', 2),
                 new symOb('~', 3, 'L', 3)};
@@ -53,6 +56,7 @@ public class Main {
                 new symOb('7', 4, 'L', 1), new symOb('8', 4, 'L', 1),
                 new symOb('9', 4, 'L', 1), new symOb('0', 4, 'L', 2),
                 new symOb('~', 4, 'L', 3)};
+
 
         stateOb stateOne = new stateOb(1, symbolObjectOne);
         stateOb stateTwo = new stateOb(2, symbolObjectTwo);
@@ -67,7 +71,22 @@ public class Main {
         testTape.moveTapePos(stateOne.getMoveDirFromArr(10));
         System.out.println(testTape.getTapeCurrentSymbol());
         System.out.println(machine.getStateLstSymb(10, 1));
+        System.out.println();
 
+        System.out.println(machine.charToNumConv(testTape));
+        System.out.println();
+        testTape.moveTapePos('R');
+        System.out.println(machine.charToNumConv(testTape));
+        testTape.moveTapePos('L');
+        testTape.changeTape(testTape.getCurrentPos(), '4');
+        System.out.println();
+        System.out.println(machine.charToNumConv(testTape));
+        System.out.println();
+        testTape.printAll();
+        System.out.println();
+        System.out.println(testTape.getCurrentState());
+
+        System.out.println(machine.getStateLstSymb(machine.charToNumConv(testTape), 3));
 
     }
 

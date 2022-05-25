@@ -22,9 +22,8 @@ public class TuringTape {
         tape.add(2,'~');
         currentState = 1;
         currentPos = 1;
+}
 
-
-    }
 
     public void changeTape(int pos, Character in) {
         tape.set(pos, in);
@@ -68,7 +67,7 @@ public class TuringTape {
     public void printAll() {
 
         for(Character e : tape) {
-            System.out.println(e);
+            System.out.print(e + " ");
         }
 
     }
