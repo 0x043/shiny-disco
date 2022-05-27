@@ -17,6 +17,8 @@ public class turingStates {
         stateList = sts;
     }
 
+
+    // Get state testTape
     public Character getStateLstSymb (int SymbIndex, int state) {
 
         return stateList[state - 1].getSymbolFromArr(SymbIndex);

@@ -21,7 +21,7 @@ public class TuringTape {
         tape.add(1, '0');
         tape.add(2,'~');
         currentState = 1;
-        currentPos = 1;
+        currentPos = 0;
 }
 
 
