@@ -53,11 +53,11 @@ public class Main {
                 new symOb('9', 2, 'R', 3), new symOb('0', 2, 'L', 3),
                 new symOb('~', 2, 'L', 3)};
 
-        symOb[] symbolObjectThree = { new symOb('1', 3, 'L', 1), new symOb('2', 3, 'L', 1),
-                new symOb('3', 3, 'L', 1), new symOb('4', 3, 'L', 1),
-                new symOb('5', 3, 'L', 1), new symOb('6', 3, 'L', 1),
-                new symOb('7', 3, 'L', 1), new symOb('8', 3, 'L', 1),
-                new symOb('9', 3, 'L', 1), new symOb('0', 3, 'L', 2),
+        symOb[] symbolObjectThree = { new symOb('1', 3, 'R', 1), new symOb('2', 3, 'R', 1),
+                new symOb('3', 3, 'R', 1), new symOb('4', 3, 'R', 1),
+                new symOb('5', 3, 'R', 1), new symOb('6', 3, 'R', 1),
+                new symOb('7', 3, 'R', 1), new symOb('8', 3, 'R', 1),
+                new symOb('9', 3, 'R', 1), new symOb('0', 3, 'L', 2),
                 new symOb('~', 3, 'L', 3)};
 
         symOb[] symbolObjectFour = { new symOb('0', 4, 'R', 4), new symOb('2', 4, 'L', 1),
@@ -111,9 +111,10 @@ public class Main {
         while(true) {
 
 
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(50);
 
 
+            
             Character moveDirec =  machine.getMoveDirFromLst(machine.charToNumConv(testTape), testTape.getCurrentState());
             int nextStateTMP = machine.getNextStateFromLst(machine.charToNumConv(testTape), testTape.getCurrentState());
 
@@ -123,8 +124,8 @@ public class Main {
             testTape.changeState(nextStateTMP);
 
             testTape.printAll();
-            System.out.println();
-
+            System.out.println(nextStateTMP);
+            
         }
 
 
