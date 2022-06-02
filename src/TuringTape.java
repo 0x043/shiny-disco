@@ -19,10 +19,29 @@ public class TuringTape {
 
         tape.add(0, '0');
         tape.add(1, '0');
-        tape.add(2,'~');
+        tape.add(2, '0');
+        tape.add(3, '0');
+        tape.add(4, '0');
+        tape.add(5,'~');
         currentState = 1;
-        currentPos = 0;
+        currentPos = tape.size() - 2;
 }
+    
+    public TuringTape(int numOfDigits) {
+    	
+    	tape = new LinkedList<Character>();
+    	
+    	for(int i = 0; i < numOfDigits; i++) {
+    		
+    		tape.add(i, '0');
+    		
+    	}
+    	
+    	tape.add(tape.size(), '~');
+    	currentState = 1;
+    	currentPos = tape.size() - 2;
+    	
+    }
 
 
     public void changeTape(int pos, Character in) {

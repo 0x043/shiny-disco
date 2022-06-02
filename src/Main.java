@@ -35,9 +35,9 @@ public class Main {
 
          */
 
-        TuringTape testTape = new TuringTape();
+        TuringTape testTape = new TuringTape(7);
 
-        symOb[] symbolObjectOne = { new symOb('0', 1, 'R', 3), new symOb('1', 1, 'R', 3),
+        symOb[] symbolObjectOne = { new symOb('0', 1, 'R', 1), new symOb('1', 1, 'R', 3),
                 new symOb('2', 1, 'R', 3), new symOb('3', 1, 'R', 3),
                 new symOb('4', 1, 'R', 3), new symOb('5', 1, 'R', 3),
                 new symOb('6', 1, 'R', 3), new symOb('7', 1, 'R', 3),
@@ -46,11 +46,11 @@ public class Main {
 
 
 
-        symOb[] symbolObjectTwo = { new symOb('1', 2, 'R', 4), new symOb('2', 2, 'R', 3),
-                new symOb('3', 2, 'R', 3), new symOb('4', 2, 'R', 3),
-                new symOb('5', 2, 'R', 3), new symOb('6', 2, 'R', 3),
-                new symOb('7', 2, 'R', 3), new symOb('8', 2, 'R', 3),
-                new symOb('9', 2, 'R', 3), new symOb('0', 2, 'L', 3),
+        symOb[] symbolObjectTwo = { new symOb('1', 2, 'R', 4), new symOb('2', 2, 'R', 4),
+                new symOb('3', 2, 'R', 4), new symOb('4', 2, 'R', 4),
+                new symOb('5', 2, 'R', 4), new symOb('6', 2, 'R', 4),
+                new symOb('7', 2, 'R', 4), new symOb('8', 2, 'R', 4),
+                new symOb('9', 2, 'R', 4), new symOb('0', 2, 'L', 3),
                 new symOb('~', 2, 'L', 3)};
 
         symOb[] symbolObjectThree = { new symOb('1', 3, 'R', 1), new symOb('2', 3, 'R', 1),
@@ -76,32 +76,6 @@ public class Main {
         stateOb[] baseTenStates = { stateOne, stateTwo, stateThree, stateFour };
         turingStates machine = new turingStates(baseTenStates);
 
-        /*
-
-        testTape.moveTapePos(stateOne.getMoveDirFromArr(3));
-        System.out.println(testTape.getTapeCurrentSymbol());
-        testTape.moveTapePos(stateOne.getMoveDirFromArr(10));
-        System.out.println(testTape.getTapeCurrentSymbol());
-        System.out.println(machine.getStateLstSymb(10, 1));
-        System.out.println();
-
-        System.out.println(machine.charToNumConv(testTape));
-        System.out.println();
-        testTape.moveTapePos('R');
-        System.out.println(machine.charToNumConv(testTape));
-        testTape.moveTapePos('L');
-        testTape.changeTape(testTape.getCurrentPos(), '4');
-        System.out.println();
-        System.out.println(machine.charToNumConv(testTape));
-        System.out.println();
-        testTape.printAll();
-        System.out.println();
-        System.out.println(testTape.getCurrentState());
-
-        System.out.println(machine.getStateLstSymb(machine.charToNumConv(testTape), 3));
-
-
-         */
         System.out.println();
 
         testTape.printAll();
@@ -111,7 +85,7 @@ public class Main {
         while(true) {
 
 
-            TimeUnit.MILLISECONDS.sleep(50);
+            TimeUnit.MILLISECONDS.sleep(5);
 
 
             
@@ -124,7 +98,7 @@ public class Main {
             testTape.changeState(nextStateTMP);
 
             testTape.printAll();
-            System.out.println(nextStateTMP);
+            System.out.println(testTape.getCurrentState() + " " + testTape.getCurrentPos());
             
         }
 
