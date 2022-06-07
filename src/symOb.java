@@ -1,5 +1,9 @@
 public class symOb {
-// Symbols will be based on place in array (1 == index 0, 2 == index 1 and so on)
+
+	
+	
+	// This is the root of instructions, this will always be called to get information, but not directly. 
+	
     private Character symbol;
     private int stateNumber;
     private Character moveDir;

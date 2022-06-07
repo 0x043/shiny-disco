@@ -13,6 +13,31 @@ public class turingStates {
 
     // If statement to check if symbol can be convert to char
 
+    
+    
+    /*
+     
+     
+     Symbols to number rep:
+     
+     	0 = 0
+     	1 = 1
+     	2 = 2
+     	3 = 3
+     	4 = 4
+     	5 = 5
+     	6 = 6
+     	7 = 7
+     	8 = 8
+     	9 = 9
+     	~ = 10
+     
+     
+     
+     */
+    
+    
+    
     public turingStates(stateOb[] sts) {
         stateList = sts;
     }
@@ -24,7 +49,8 @@ public class turingStates {
         return stateList[state - 1].getSymbolFromArr(SymbIndex);
 
     }
-
+    
+    // Get move direction
     public Character getMoveDirFromLst(int SymbIndex, int state) {
 
         return stateList[state - 1].getMoveDirFromArr(SymbIndex);
@@ -37,13 +63,19 @@ public class turingStates {
 
 
 
+    
+    // Utility function to convert characters to numbers
     public int charToNumConv(TuringTape y) {
 
 
+    	
+    	// If '~' then it returns 10, because base 10.
         if(y.getTapeCurrentSymbol().equals('~')) {
             return 10;
         }
 
+        
+        // Conversion of char to int if not '~'
         else {
             return Character.getNumericValue(y.getTapeCurrentSymbol());
         }

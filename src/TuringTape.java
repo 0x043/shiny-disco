@@ -2,15 +2,15 @@ import java.util.LinkedList;
 
 public class TuringTape {
 
-    // TODO: Algo to find current state, identify symbol on current tape position, and get the instruction set for that state.
 
+	
+	// The tape is created using a LinkedList
     private LinkedList<Character> tape;
-
-    // States are defined as the following:
-    /*
-
-     */
+    
+    // This int will hold the current state that the machine is in. 
     private int currentState;
+    
+    // This int will hold the pos of the "head on the tape"
     private int currentPos;
 
     public TuringTape() {
@@ -70,8 +70,6 @@ public class TuringTape {
 
     public void changeState(int s) {
 
-        // Implement state checking, to make sure that the state exists.
-
         currentState = s;
     }
 
@@ -83,6 +81,9 @@ public class TuringTape {
         return currentPos;
    }
 
+    
+    // Prints everything on tape
+    
     public void printAll() {
 
         for(Character e : tape) {

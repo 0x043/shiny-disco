@@ -2,39 +2,17 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
     public static void main(String[] args) throws InterruptedException {
 
-        // TODO: Implement running the program, display, and halt, also make tape infinite? To display clear the screen then print array
-        // How do I add new places to the number? From 99 to 100, and 999 to 1000? Can I set all of the values to null?
-        // Every time program is at position 0, and the value is 9 -> tape.add(0, '0'); Case?
 
-
-        // TODO: Appending zeros once sequence 99..
-
-
-        /*
-
-            Index to symbol reference
-
-            0 = 0
-            1 = 1
-            2 = 2
-            3 = 3
-            4 = 4
-            5 = 5
-            6 = 6
-            7 = 7
-            8 = 8
-            9 = 9
-            10 = ~
-
-
-         */
-
+    	
+    	// Layers of calls: symOb -> stateOb -> turingStates -> run
+    	
+    	
+    	// This defines the states that the turing machine is going to use. 
+    	
+    	// symbolObject (Change current symbol to (Character), currentState (int), move direction on tape (Character (Left Or Right)), next state)
+    	
         TuringTape testTape = new TuringTape(7);
 
         symOb[] symbolObjectOne = { new symOb('0', 1, 'R', 1), new symOb('1', 1, 'R', 3),
@@ -80,12 +58,18 @@ public class Main {
 
         testTape.printAll();
 
+        
         TimeUnit.SECONDS.sleep(1);
 
+        
+        // While loop executes the machine. Each interation is an execution of a state.
+        
         while(true) {
 
 
-            TimeUnit.MILLISECONDS.sleep(5);
+        	// Wait 200 MS before executing next state
+        	
+            TimeUnit.MILLISECONDS.sleep(200);
 
 
             
@@ -98,7 +82,7 @@ public class Main {
             testTape.changeState(nextStateTMP);
 
             testTape.printAll();
-            System.out.println(testTape.getCurrentState() + " " + testTape.getCurrentPos());
+            System.out.println(" Current State: " + testTape.getCurrentState() + " Current Tape Position: " + testTape.getCurrentPos());
             
         }
 
