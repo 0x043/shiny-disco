@@ -75,7 +75,7 @@ public class turingStates {
         }
 
         
-        // Conversion of char to int if not '~'
+        // Conversion to int if not '~'
         else {
             return Character.getNumericValue(y.getTapeCurrentSymbol());
         }

@@ -64,7 +64,7 @@ public class Main {
         
         // While loop executes the machine. Each interation is an execution of a state.
         
-        while(true) {
+        while(testTape.getRunning()) {
 
 
         	// Wait 200 MS before executing next state

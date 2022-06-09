@@ -12,6 +12,7 @@ public class TuringTape {
     
     // This int will hold the pos of the "head on the tape"
     private int currentPos;
+    private boolean running = true;
 
     public TuringTape() {
 
@@ -60,6 +61,8 @@ public class TuringTape {
             currentPos++;
         } else if(d.equals('L') || d.equals('l')){
             currentPos--;
+        } else if(d.equals('H') || d.equals('h')) {
+        	running = false;
         }
 
     }
@@ -68,6 +71,11 @@ public class TuringTape {
         return getTapeFPos(getCurrentPos());
     }
 
+    
+    public boolean getRunning() {
+    	return running;
+    }
+    
     public void changeState(int s) {
 
         currentState = s;
