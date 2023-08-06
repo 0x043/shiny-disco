@@ -1,2 +1,2 @@
 # shiny-disco
-Turing machine that counts in base 10. 
+Universal turining machine with program that counts in base 10
